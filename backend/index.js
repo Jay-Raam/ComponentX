@@ -21,12 +21,8 @@ mongoose
     useUnifiedTopology: true,
     serverSelectionTimeoutMS: 5000,
   })
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.error("Error connecting to MongoDB:", err.message);
-  });
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("Error connecting to MongoDB:", err.message));
 
 // Define schemas and models
 
@@ -48,29 +44,27 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
 });
 
-const User = mongoose.model("users", userSchema);
-
 // Middleware to hash passwords before saving
 userSchema.pre("save", async function (next) {
   if (this.isModified("password")) {
     try {
       const salt = await bcrypt.genSalt(10);
       this.password = await bcrypt.hash(this.password, salt);
-      next();
     } catch (error) {
-      next(error);
+      return next(error);
     }
-  } else {
-    next();
   }
+  next();
 });
+
+const User = mongoose.model("users", userSchema);
 
 // Routes
 
 // Route to get companies with pagination
 app.get("/api/companies", async (req, res) => {
-  const limit = parseInt(req.query.limit) || 30;
-  const skip = parseInt(req.query.skip) || 0;
+  const limit = parseInt(req.query.limit, 10) || 30;
+  const skip = parseInt(req.query.skip, 10) || 0;
 
   try {
     const companies = await Company.find().limit(limit).skip(skip);
@@ -128,18 +122,17 @@ app.post("/api/login", async (req, res) => {
   try {
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(401).json({ message: "Invalid email" });
+      return res.status(401).json({ message: "Invalid email or password" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(401).json({ message: "Invalid password" });
+      return res.status(401).json({ message: "Invalid email or password" });
     }
-
     res.json({ message: "Login successful" });
   } catch (error) {
-    console.error("Login error:", error.message);
-    res.status(500).json({ message: "An error occurred" });
+    console.error("Login error:", error.message); // Log errors
+    res.status(500).json({ message: "An error occurred during login" });
   }
 });
 

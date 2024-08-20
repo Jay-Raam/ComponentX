@@ -20,6 +20,8 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setSubmission(null);
+
     try {
       const response = await fetch("http://localhost:3001/api/login", {
         method: "POST",
@@ -30,8 +32,8 @@ function Login() {
       });
 
       if (!response.ok) {
-        const errorMessage = await response.text();
-        throw new Error(errorMessage || "Network response was not ok");
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Network response was not ok");
       }
 
       const result = await response.json();
@@ -44,11 +46,11 @@ function Login() {
     } catch (err) {
       console.error("Error logging in:", err);
       setError(
-        "Error logging in. Please check your credentials and try again."
+        err.message ||
+          "Error logging in. Please check your credentials and try again."
       );
     }
   };
-
   // Toggle password visibility
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);

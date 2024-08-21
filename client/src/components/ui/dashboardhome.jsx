@@ -9,8 +9,10 @@ const Dashboardhome = () => {
     <div className="flex flex-col w-full h-auto items-center justify-center mt-20">
       {isMobile ? (
         // Layout optimized for mobile or tablet
-        <div className="w-full">
-          <h1>not optimise for this chat for mobiles</h1>
+        <div className="w-full flex justify-center items-center font-bebas text-5xl">
+          <h1 className="text-center">
+            Not optimise for this charts in mobiles...
+          </h1>
         </div>
       ) : (
         // Layout optimized for desktop/laptops

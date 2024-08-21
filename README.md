@@ -7,6 +7,13 @@ aimed at providing insightful data visualization and analytics for better invest
 ComponentX is built to simplify stock market data interpretation and enhance decision-making through sophisticated components and visualizations. 
 Whether you’re a trader, analyst, or enthusiast, this tool is crafted to help you make more informed decisions with ease.
 
+## What I learned
+This was my first experience working on a full-stack web application, and it provided me with valuable learning opportunities in database interaction and full-stack development. I designed the user interface based on a Figma file and implemented all functionalities using React.js and Tailwind CSS.
+
+I gained hands-on experience with MongoDB, learning how to manage both local and deployed instances effectively. Additionally, I explored React Hook Form for managing and validating form data, which enhanced my understanding of form handling in React.
+
+I also delved deeper into advanced features of Tailwind CSS, which improved my styling skills and allowed me to create more dynamic and responsive designs. Overall, this project was a significant learning experience and greatly contributed to my growth as a frontend engineer.
+
 ## Tech Stack
 
 Client: React, TailwindCSS, Chart.js, Node.js, Express.js, Mongodb.

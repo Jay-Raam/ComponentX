@@ -76,15 +76,15 @@ app.get("/api/companies", async (req, res) => {
 });
 
 // Route to get all users
-app.get("/api/users", async (req, res) => {
-  try {
-    const users = await User.find();
-    res.json(users);
-  } catch (error) {
-    console.error("Failed to fetch users:", error.message);
-    res.status(500).json({ message: "Failed to fetch users" });
-  }
-});
+// app.get("/api/users", async (req, res) => {
+//   try {
+//     const users = await User.find();
+//     res.json(users);
+//   } catch (error) {
+//     console.error("Failed to fetch users:", error.message);
+//     res.status(500).json({ message: "Failed to fetch users" });
+//   }
+// });
 
 // Route to handle user registration
 app.post("/api/register", async (req, res) => {

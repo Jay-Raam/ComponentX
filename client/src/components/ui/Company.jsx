@@ -15,7 +15,7 @@ const CompanyList = () => {
     const fetchCompanies = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/api/companies?limit=${limit}&skip=${skip}`
+          `https://componentx-server.vercel.app/api/companies?limit=${limit}&skip=${skip}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

@@ -9,7 +9,7 @@ Whether you’re a trader, analyst, or enthusiast, this tool is crafted to help 
 
 ## Tech Stack
 
-Client: React, TailwindCSS, Chart.js, Node.js, Mongodb.
+Client: React, TailwindCSS, Chart.js, Node.js, Express.js, Mongodb.
 
 Hosting: Vercel.
 

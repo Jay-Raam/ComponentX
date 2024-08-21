@@ -6,10 +6,10 @@ import Gainer from "./Gainer";
 const Dashboardhome = () => {
   const companies = ["AAPL", "GOOGL", "MSFT"];
   return (
-    <div className="flex flex-col w-full h-auto items-center justify-center mt-20">
+    <div className="flex flex-col w-full h-auto items-center justify-center mt-24">
       {isMobile ? (
         // Layout optimized for mobile or tablet
-        <div className="w-full flex justify-center items-center font-bebas text-5xl">
+        <div className="w-full flex justify-center items-center font-bebas text-5xl h-[100vh]">
           <h1 className="text-center">
             Not optimise for this charts in mobiles...
           </h1>

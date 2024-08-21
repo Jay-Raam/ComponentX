@@ -49,11 +49,11 @@ function Profile() {
         <div className="flex flex-col items-center justify-center gap-3">
           <p className="mb-2 font-open flex flex-col items-center justify-center gap-3">
             <strong className="text-xl font-bebas">Email</strong>
-            <span className="text-xl">{profileData.email}</span>
+            <span className="text-xl font-open">{profileData.email}</span>
           </p>
           <p className="mb-2 font-open flex flex-col items-center justify-center gap-3">
             <strong className="font-bebas text-xl">Name</strong>
-            <span className="text-xl">{profileData.name}</span>
+            <span className="text-xl font-open">{profileData.name}</span>
           </p>
           {/* Add more fields as needed */}
         </div>

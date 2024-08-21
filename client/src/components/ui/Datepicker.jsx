@@ -80,10 +80,10 @@ const FinancialDataFetcher = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-5 mt-20">
+      <div className="flex flex-col items-center gap-5 mt-28">
         <h1 className="text-2xl font-bold mb-4">Historical Price Data</h1>
         <div className="w-full max-w-md flex flex-col items-center">
-          <label className="block mb-2">Company Symbol</label>
+          <label className="mb-2 font-open">Company Symbol</label>
           <input
             type="text"
             value={company}
@@ -93,7 +93,7 @@ const FinancialDataFetcher = () => {
           />
         </div>
         <div className="w-full max-w-md flex flex-col items-center">
-          <label className="block mb-2">From</label>
+          <label className="mb-2 font-open">From</label>
           <DatePicker
             selected={startDate}
             onChange={handleStartDateChange}
@@ -104,7 +104,7 @@ const FinancialDataFetcher = () => {
           />
         </div>
         <div className="w-full max-w-md flex flex-col items-center">
-          <label className="block mb-2">To</label>
+          <label className="mb-2 font-open">To</label>
           <DatePicker
             selected={endDate}
             onChange={handleEndDateChange}

@@ -35,7 +35,7 @@ const CompanyList = () => {
 
   return (
     <>
-      <div className="company mt-20">
+      <div className="company mt-24">
         {loading && (
           <div className="banter-loader">
             <div className="banter-loader__box"></div>
@@ -54,7 +54,7 @@ const CompanyList = () => {
           {companies.map((company) => (
             <li
               key={company._id}
-              className="flex justify-center items-center gap-4 flex-col w-[250px] text-center border-[2px] p-3 rounded-md"
+              className="flex justify-center items-center gap-4 flex-col w-[280px] md:[350px] text-center border-[2px] p-3 rounded-md"
             >
               <img
                 src={Image00003}

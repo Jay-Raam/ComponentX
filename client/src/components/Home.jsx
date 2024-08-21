@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { MdOutlineMenu } from "react-icons/md";
-import Image001 from "./image/m1.png";
 import { Link } from "react-router-dom";
 import Image002 from "./image/m2.webp";
 import Image003 from "./image/m4.jpeg";
@@ -35,7 +34,9 @@ const Home = () => {
       <div className="navbar">
         <nav className="nav flex justify-between items-center w-full p-5 fixed top-0 bg-white z-50">
           <div className="logo">
-            <img src={Image001} alt="logo" className="w-[170px] md:ml-10" />
+            <h1 className="font-logo text-[50px]">
+              Component<span className="font-logotwo text-[50px]">X</span>
+            </h1>
           </div>
           <MdOutlineMenu
             onClick={handleMenuToggle}
@@ -136,9 +137,7 @@ const Home = () => {
             Why Choose ComponentX?
           </h1>
           <p className="text-center font-open">
-            We bring you cutting-edge tools and real-time data to help you
-            navigate the stock market with confidence. Our platform offers live
-            stock quotes, interactive charts, and the latest market news, all
+            Our platform offers live stock quotes, interactive charts, all
             designed to keep you informed and ahead of the curve. Whether you're
             a seasoned investor or just starting out, our advanced analytics and
             personalized dashboards provide the insights you need to make
@@ -152,10 +151,6 @@ const Home = () => {
               <li className="text-center">
                 <strong>Real-Time Data</strong>: Stay ahead with live updates
                 and accurate market information.
-              </li>
-              <li className="text-center">
-                <strong>Expert Insights</strong>: Benefit from expert
-                recommendations and market analysis
               </li>
               <li className="text-center">
                 <strong>Customizable Experience</strong>: Personalize your
@@ -172,10 +167,6 @@ const Home = () => {
               <li className="text-center">
                 <strong>User-Friendly Interface</strong>: Navigate effortlessly
                 with our intuitive and sleek design.
-              </li>
-              <li className="text-center">
-                <strong>Seamless Integration</strong>: Connect with your
-                existing financial tools and platforms effortlessly.
               </li>
             </ul>
           </div>

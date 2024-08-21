@@ -15,7 +15,11 @@ const Navbar = () => {
     <nav>
       <div className="flex justify-between items-center w-full p-5 fixed top-0 bg-white z-50">
         <h1 className="md:ml-10 font-bebas text-4xl">
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <h1 className="font-logo text-[50px]">
+              Component<span className="font-logotwo text-[50px]">X</span>
+            </h1>
+          </Link>
         </h1>
         <div
           className="menu cursor-pointer text-2xl md:mr-10"

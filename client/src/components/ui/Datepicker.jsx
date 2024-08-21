@@ -82,36 +82,36 @@ const FinancialDataFetcher = () => {
     <>
       <div className="flex flex-col items-center gap-5 mt-20">
         <h1 className="text-2xl font-bold mb-4">Historical Price Data</h1>
-        <div className="w-full max-w-md">
-          <label className="block mb-2">Company Symbol:</label>
+        <div className="w-full max-w-md flex flex-col items-center">
+          <label className="block mb-2">Company Symbol</label>
           <input
             type="text"
             value={company}
             onChange={(e) => setCompany(e.target.value.toUpperCase())}
             placeholder="Enter company symbol"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-[300px] md:w-[400px] p-2.5"
           />
         </div>
-        <div className="w-full max-w-md">
-          <label className="block mb-2">From:</label>
+        <div className="w-full max-w-md flex flex-col items-center">
+          <label className="block mb-2">From</label>
           <DatePicker
             selected={startDate}
             onChange={handleStartDateChange}
             dateFormat="dd-MM-yyyy"
             minDate={MIN_DATE}
             maxDate={endDate}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-[300px] md:w-[400px] p-2.5"
           />
         </div>
-        <div className="w-full max-w-md">
-          <label className="block mb-2">To:</label>
+        <div className="w-full max-w-md flex flex-col items-center">
+          <label className="block mb-2">To</label>
           <DatePicker
             selected={endDate}
             onChange={handleEndDateChange}
             dateFormat="dd-MM-yyyy"
             minDate={startDate}
             maxDate={today}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-[300px] md:w-[400px] p-2.5"
           />
         </div>
         <button

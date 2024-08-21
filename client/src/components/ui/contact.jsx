@@ -144,7 +144,7 @@ const ContactForm = () => {
       <div className="flex justify-center w-full lg:w-[800px]">
         <form
           onSubmit={onSubmit}
-          className="max-w-[800px] w-full lg:w-[800px] flex flex-col items-center sm:p-8 rounded-lg shadow-md"
+          className="max-w-[800px] w-full lg:w-[800px] flex flex-col items-center"
         >
           <div className="mb-6 w-full">
             <label

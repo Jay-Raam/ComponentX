@@ -10,14 +10,13 @@ function Profile() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Only fetch data if email is available
     if (email) {
       // Define an async function to fetch data
       const fetchProfileData = async () => {
         setLoading(true);
         try {
           const response = await fetch(
-            `http://localhost:3001/api/users/by-email?email=${email}`
+            `https://componentx-server.vercel.app/api/users/by-email?email=${email}`
           );
           if (!response.ok) {
             throw new Error("Network response was not ok");

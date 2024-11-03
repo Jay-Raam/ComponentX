@@ -51,10 +51,7 @@ function Users() {
 
   return (
     <div className="register">
-      <h1 className="flex justify-center items-center mt-4 mb-6 text-2xl font-medium">
-        Register
-      </h1>
-      <div className="flex justify-center items-center flex-col lg:flex-row gap-4 pb-5 md:pb-0 max-w-[1200px] mx-auto my-0">
+      <div className="flex justify-center items-center flex-col lg:flex-row gap-4 pb-5 md:pb-0 max-w-[1200px] mx-auto my-0 mt-10">
         <div className="image w-full lg:w-2/4 flex justify-center items-center">
           <img
             src={Image00001}
@@ -66,6 +63,10 @@ function Users() {
           onSubmit={handleSubmit}
           className="flex flex-col gap-4 justify-center items-center w-full lg:w-2/4"
         >
+          <h1 className="font-bebas font-normal text-center text-[35px]">
+            Register
+          </h1>
+
           <div className="relative mb-6 w-full max-w-xs">
             <label htmlFor="name" className="sr-only">
               Name
@@ -76,7 +77,7 @@ function Users() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="bg-gray-50 border border-gray-300 pl-3 text-gray-900 text-sm rounded-lg w-full p-2.5 dark:border-gray-600"
+              className="w-full border border-gray-500 rounded-md px-3 py-2 text-[16px] font-extralight"
               placeholder="Name"
             />
           </div>
@@ -91,8 +92,8 @@ function Users() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="bg-gray-50 border border-gray-300 pl-3 text-gray-900 text-sm rounded-lg w-full p-2.5 dark:border-gray-600"
-              placeholder="name@flowbite.com"
+              className="w-full border border-gray-500 rounded-md px-3 py-2 text-[16px] font-extralight"
+              placeholder="example@name.com"
             />
           </div>
 
@@ -106,7 +107,7 @@ function Users() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="bg-gray-50 border border-gray-300 pl-3 text-gray-900 text-sm rounded-lg w-full p-2.5 dark:border-gray-600"
+              className="w-full border border-gray-500 rounded-md px-3 py-2 text-[16px] font-extralight"
               placeholder="••••••••"
             />
             <div
@@ -143,17 +144,23 @@ function Users() {
 
           <button
             type="submit"
-            className="text-white w-[200px] bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            className="text-white w-[200px] bg-black px-5 py-2 rounded-md font-bebas text-center hover:bg-slate-400"
           >
             Submit
           </button>
           {message && <p className="mt-2">{message}</p>}
           {error && <p className="text-red-500 mt-2">{error}</p>}
-          <p className="text-center mt-2">
-            have an account? <Link to="/login">Login</Link>
+          <p className="text-center mt-2 font-bebas">
+            have an account?{" "}
+            <Link to="/login" className="underline ml-1">
+              Login
+            </Link>
           </p>
-          <p className="text-center mt-2">
-            Back to <Link to="/">Home</Link>
+          <p className="text-center mt-2 font-bebas">
+            Back to{" "}
+            <Link to="/" className="underline ml-1">
+              Home
+            </Link>
           </p>
         </form>
       </div>

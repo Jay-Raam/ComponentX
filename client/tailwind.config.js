@@ -9,6 +9,16 @@ module.exports = {
         logo: ["Italianno", "sans-serif"],
         logotwo: ["Italiana", "sans-serif"],
       },
+      animation: {
+        wave: "wave 1s infinite",
+      },
+      keyframes: {
+        wave: {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
     },
   },
   plugins: [],

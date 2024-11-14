@@ -10,7 +10,7 @@ Whether you’re a trader, analyst, or enthusiast, this tool is crafted to help 
 ## What I learned
 This was my first experience working on a full-stack web application, and it provided me with valuable learning opportunities in database interaction and full-stack development. I designed the user interface based on a Figma file and implemented all functionalities using React.js and Tailwind CSS.
 
-I gained hands-on experience with MongoDB, learning how to manage both local and deployed instances effectively. Additionally, I explored React Hook Form for managing and validating form data, which enhanced my understanding of form handling in React.
+I gained hands-on experience with MongoDB, learning how to manage both local and deployed instances effectively.
 
 I also delved deeper into advanced features of Tailwind CSS, which improved my styling skills and allowed me to create more dynamic and responsive designs. Overall, this project was a significant learning experience and greatly contributed to my growth as a frontend engineer.
 

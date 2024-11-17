@@ -243,7 +243,7 @@ const Home = () => {
 
       <section
         id="contact"
-        className="contact flex justify-center mt-8 items-center gap-6 flex-col max-w-[1200px] mx-auto my-0"
+        className="contact flex justify-center mt-8 items-center gap-6 flex-col max-w-[1200px] mx-auto my-0 h-svh"
       >
         <h2 className="font-bebas text-center text-3xl">Contact Us</h2>
         <p className="font-open text-center">

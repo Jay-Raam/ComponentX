@@ -211,13 +211,13 @@ const ContactForm = () => {
           <div className="flex justify-center items-center flex-col sm:flex-row gap-10">
             <button
               type="submit"
-              className="py-2 px-4 bg-black text-white rounded hover:bg-transparent hover:text-black border border-black"
+              className="py-2 px-4 w-[200px] md:w-[300px] bg-black text-white rounded hover:bg-transparent hover:text-black border border-black"
             >
               Submit
             </button>
             <button
               type="reset"
-              className="py-2 px-4 bg-black text-white rounded hover:bg-transparent hover:text-black border border-black"
+              className="py-2 px-4 w-[200px] md:w-[300px] bg-black text-white rounded hover:bg-transparent hover:text-black border border-black"
               onClick={handleChangeReset}
             >
               Reset
